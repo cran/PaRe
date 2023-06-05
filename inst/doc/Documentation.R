@@ -55,8 +55,8 @@ fileWhiteList
 #    )
 #  )
 
-## ----permittedPackages, message=FALSE, warning=FALSE--------------------------
-PaRe::getDefaultPermittedPackages(base = TRUE)
+## ----permittedPackages, eval=FALSE, message=FALSE, warning=FALSE--------------
+#  PaRe::getDefaultPermittedPackages(base = TRUE)
 
 ## ----cloneRepoShow, eval=FALSE------------------------------------------------
 #  # Temp dir to clone repo to
