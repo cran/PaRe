@@ -1,6 +1,6 @@
-16d442dfd88b00aef1d022b668e58c3a *DESCRIPTION
+948fcef7cfab8bac9ee74768f76531c9 *DESCRIPTION
 1f8872827c5944a4083e3a67e01f02d0 *NAMESPACE
-0bbbb827be83fa6fcbd8598b1fa45db6 *NEWS.md
+220d8f73b0e71a9ae52e56f75db9aec8 *NEWS.md
 5c8bca3dc5926d17a2a309d1dbc4c7bf *R/PaRe-package.R
 690883c60013852f5e1e67c9e1e20c61 *R/R6-Code.R
 9f0aa369b24fc227f2ed394b6a74331e *R/R6-File.R
@@ -21,9 +21,9 @@ cf794928715019cf81bd51d467156178 *R/utils-pipe.R
 b2680f14304ba0e862d85ce606ebffa2 *README.md
 743e77e9164f0eabaeade4b1262a0267 *build/vignette.rds
 b29edef0eaedf18b9a00f64e65c4647c *inst/WORDLIST
-edea6c14a31ceed668426c9c3d92277e *inst/doc/Documentation.R
-1cb571a69f55fcc1a674a4174502c04f *inst/doc/Documentation.Rmd
-f45605176679417df63fce63c2db7a73 *inst/doc/Documentation.html
+89aa2378ba4de19ea38eb6488f735783 *inst/doc/Documentation.R
+89482f5459b68796002d02d6750ab5e2 *inst/doc/Documentation.Rmd
+6e1fd45c504826c042f98601536bc175 *inst/doc/Documentation.html
 d62b3c4c1af50d76ef77784a8cb26bd1 *inst/img/logo.png
 a48bb48401b7f3d9405b85111c0a6262 *inst/rmd/ReportInjectable.Rmd
 70fbd9c5231bc16201c45c9c271d8f2b *inst/rmd/report.Rmd
@@ -67,6 +67,6 @@ d14143c9b0a631d6ee07e9da956d9867 *man/getGraphData.Rd
 5ef87067fec0edf62a0670b70e14c467 *man/pkgDiagram.Rd
 e0db61bd097f0f30c129ec957562e993 *man/printMessage.Rd
 d33e53f5d0121239eb85c6150e326189 *man/whiteList.Rd
-1cb571a69f55fcc1a674a4174502c04f *vignettes/Documentation.Rmd
+89482f5459b68796002d02d6750ab5e2 *vignettes/Documentation.Rmd
 08d9d6b171b970059f24dabd6c576712 *vignettes/img/glueDiagram.svg
 78c2ea0c0cc50c7ba60892bc9e42e460 *vignettes/img/glueGraph.png

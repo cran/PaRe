@@ -6,7 +6,8 @@ knitr::opts_chunk$set(
 
 ## ----localCache, echo=FALSE---------------------------------------------------
 withr::local_envvar(
-  R_USER_CACHE_DIR = tempfile()
+  R_USER_CACHE_DIR = tempfile(),
+  R_COMPILE_AND_INSTALL_PACKAGES = "always"
 )
 
 ## ----setup--------------------------------------------------------------------
