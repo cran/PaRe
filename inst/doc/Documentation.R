@@ -103,14 +103,6 @@ fetchedRepo <- tryCatch(
 #    packageTypes = c("imports", "suggests")
 #  )
 
-## ----setupGraph, echo=FALSE, warning=FALSE, message=FALSE---------------------
-if (fetchedRepo) {
-  graphData <- PaRe::getGraphData(
-    repo = repo,
-    packageTypes = c("imports", "suggests")
-  )
-}
-
 ## ----graphCharacteristicsShow, eval=FALSE-------------------------------------
 #  data.frame(
 #    countVertices = length(igraph::V(graphData)),
@@ -121,11 +113,6 @@ if (fetchedRepo) {
 
 ## ----plotGraphShow, eval=FALSE------------------------------------------------
 #  plot(graphData)
-
-## ----plotGraph, echo=FALSE----------------------------------------------------
-if (fetchedRepo) {
-  plot(graphData)
-}
 
 ## ----summariseFunctionUseShow, eval=FALSE-------------------------------------
 #  funsUsed <- PaRe::getFunctionUse(repo = repo)
