@@ -137,15 +137,13 @@ if (fetchedRepo) {
 ## ----pkgDiagramShow, eval=FALSE-----------------------------------------------
 #  PaRe::pkgDiagram(repo = repo) %>%
 #    DiagrammeRsvg::export_svg() %>%
-#    charToRaw() %>%
-#    magick::image_read()
+#    magick::image_read_svg()
 
 ## ----pkgDiagram, echo=FALSE---------------------------------------------------
 if (fetchedRepo) {
   PaRe::pkgDiagram(repo = repo) %>%
     DiagrammeRsvg::export_svg() %>%
-    charToRaw() %>%
-    magick::image_read()
+    magick::image_read_svg()
 }
 
 ## ----linesOfCodeShow, eval=FALSE----------------------------------------------
