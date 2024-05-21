@@ -1,7 +1,7 @@
 Package: PaRe
 Type: Package
 Title: A Way to Perform Code Review or QA on Other Packages
-Version: 0.1.12
+Version: 0.1.13
 Language: en-US
 Authors@R: 
     person("Maarten", "van Kessel", email = "m.l.vankessel@erasmusmc.nl",
@@ -24,9 +24,10 @@ Suggests: ggplot2, plotly, ggraph, DT, magick, withr, cowplot, knitr,
         testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
+Config/testthat/parallel: true
 NeedsCompilation: no
-Packaged: 2023-08-11 12:51:46 UTC; mvankessel
+Packaged: 2024-05-21 12:26:36 UTC; mvankessel
 Author: Maarten van Kessel [aut, cre] (<https://orcid.org/0009-0006-8832-6030>)
 Maintainer: Maarten van Kessel <m.l.vankessel@erasmusmc.nl>
 Repository: CRAN
-Date/Publication: 2023-08-11 13:13:51 UTC
+Date/Publication: 2024-05-21 12:50:14 UTC
