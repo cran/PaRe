@@ -15,27 +15,26 @@ test_that("void", {
 })
 
 test_that("minimal", {
-  skip_if(
-    utils::packageVersion(pkg = "base") > package_version("4.4.0")
-  )
-  repo <- makeRepo()
-  testthat::skip_if(!R6::is.R6(repo))
+  skip_if_offline()
+  skip_if_not(repoCloned)
+
+  repo <- Repository$new(path)
 
   expect_message(
     suppressWarnings(checkDependencies(repo = repo)),
     "All dependencies are approved."
   )
-  unlink(repo$getPath(), recursive = TRUE)
 })
 
 
 test_that("parallel", {
-  repo <- makeRepo()
-  testthat::skip_if(!R6::is.R6(repo))
+  skip_if_offline()
+  skip_if_not(repoCloned)
+
+  repo <- Repository$new(path)
 
   expect_message(
     suppressWarnings(checkDependencies(repo = repo, nThreads = 2)),
     "All dependencies are approved."
   )
-  unlink(repo$getPath(), recursive = TRUE)
 })

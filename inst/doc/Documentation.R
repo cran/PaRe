@@ -48,29 +48,29 @@ fileWhiteList <- rbind(
 fileWhiteList
 
 ## ----writeWhiteList, eval=FALSE-----------------------------------------------
-# write.csv(
-#   fileWhiteList,
-#   system.file(
-#     package = "PaRe",
-#     "whiteList.csv"
-#   )
-# )
+#  write.csv(
+#    fileWhiteList,
+#    system.file(
+#      package = "PaRe",
+#      "whiteList.csv"
+#    )
+#  )
 
 ## ----permittedPackages, eval=FALSE, message=FALSE, warning=FALSE--------------
-# PaRe::getDefaultPermittedPackages(base = TRUE)
+#  PaRe::getDefaultPermittedPackages(base = TRUE)
 
 ## ----cloneRepoShow, eval=FALSE------------------------------------------------
-# # Temp dir to clone repo to
-# tempDir <- tempdir()
-# pathToRepo <- file.path(tempDir, "glue")
-# 
-# # Clone IncidencePrevalence to temp dir
-# git2r::clone(
-#   url = "https://github.com/tidyverse/glue.git",
-#   local_path = pathToRepo
-# )
-# 
-# repo <- PaRe::Repository$new(path = pathToRepo)
+#  # Temp dir to clone repo to
+#  tempDir <- tempdir()
+#  pathToRepo <- file.path(tempDir, "glue")
+#  
+#  # Clone IncidencePrevalence to temp dir
+#  git2r::clone(
+#    url = "https://github.com/tidyverse/glue.git",
+#    local_path = pathToRepo
+#  )
+#  
+#  repo <- PaRe::Repository$new(path = pathToRepo)
 
 ## ----cloneRepo, echo=FALSE----------------------------------------------------
 fetchedRepo <- tryCatch(
@@ -95,28 +95,28 @@ fetchedRepo <- tryCatch(
 )
 
 ## ----checkDependenciesShow, eval=FALSE----------------------------------------
-# PaRe::checkDependencies(repo = repo)
+#  PaRe::checkDependencies(repo = repo)
 
 ## ----setupGraphShow, eval=FALSE-----------------------------------------------
-# graphData <- PaRe::getGraphData(
-#   repo = repo,
-#   packageTypes = c("imports", "suggests")
-# )
+#  graphData <- PaRe::getGraphData(
+#    repo = repo,
+#    packageTypes = c("imports", "suggests")
+#  )
 
 ## ----graphCharacteristicsShow, eval=FALSE-------------------------------------
-# data.frame(
-#   countVertices = length(igraph::V(graphData)),
-#   countEdges = length(igraph::E(graphData)),
-#   meanDegree = round(mean(igraph::degree(graphData)), 2),
-#   meanDistance = round(mean(igraph::distances(graphData)), 2)
-# )
+#  data.frame(
+#    countVertices = length(igraph::V(graphData)),
+#    countEdges = length(igraph::E(graphData)),
+#    meanDegree = round(mean(igraph::degree(graphData)), 2),
+#    meanDistance = round(mean(igraph::distances(graphData)), 2)
+#  )
 
 ## ----plotGraphShow, eval=FALSE------------------------------------------------
-# plot(graphData)
+#  plot(graphData)
 
 ## ----summariseFunctionUseShow, eval=FALSE-------------------------------------
-# funsUsed <- PaRe::getFunctionUse(repo = repo)
-# funsUsed
+#  funsUsed <- PaRe::getFunctionUse(repo = repo)
+#  funsUsed
 
 ## ----summariseFunctionUse, echo=FALSE, message=FALSE, warning=FALSE-----------
 if (fetchedRepo) {
@@ -125,8 +125,8 @@ if (fetchedRepo) {
 }
 
 ## ----definedFunctionsShow, eval=FALSE-----------------------------------------
-# defFuns <- PaRe::getDefinedFunctions(repo = repo)
-# head(defFuns)
+#  defFuns <- PaRe::getDefinedFunctions(repo = repo)
+#  head(defFuns)
 
 ## ----definedFunctions, echo=FALSE---------------------------------------------
 if (fetchedRepo) {
@@ -135,9 +135,9 @@ if (fetchedRepo) {
 }
 
 ## ----pkgDiagramShow, eval=FALSE-----------------------------------------------
-# PaRe::pkgDiagram(repo = repo) %>%
-#   DiagrammeRsvg::export_svg() %>%
-#   magick::image_read_svg()
+#  PaRe::pkgDiagram(repo = repo) %>%
+#    DiagrammeRsvg::export_svg() %>%
+#    magick::image_read_svg()
 
 ## ----pkgDiagram, echo=FALSE---------------------------------------------------
 if (fetchedRepo) {
@@ -151,7 +151,7 @@ if (fetchedRepo) {
 }
 
 ## ----linesOfCodeShow, eval=FALSE----------------------------------------------
-# PaRe::countPackageLines(repo = repo)
+#  PaRe::countPackageLines(repo = repo)
 
 ## ----linesOfCode, echo=FALSE--------------------------------------------------
 if (fetchedRepo) {
@@ -159,8 +159,8 @@ if (fetchedRepo) {
 }
 
 ## ----lintScoreShow, eval=FALSE------------------------------------------------
-# messages <- PaRe::lintRepo(repo = repo)
-# PaRe::lintScore(repo = repo, messages = messages)
+#  messages <- PaRe::lintRepo(repo = repo)
+#  PaRe::lintScore(repo = repo, messages = messages)
 
 ## ----lintScore, echo=FALSE----------------------------------------------------
 if (fetchedRepo) {
@@ -169,7 +169,7 @@ if (fetchedRepo) {
 }
 
 ## ----lintMessagesShow, eval=FALSE---------------------------------------------
-# head(messages)
+#  head(messages)
 
 ## ----lintMessages, echo=FALSE-------------------------------------------------
 if (fetchedRepo) {
